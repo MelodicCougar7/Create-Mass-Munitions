@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "AAA",
+        "ABA",
+        "AAA"
+    ],
+    "key": {
+        "A": {
+            "item": "minecraft:gold_ingot"
+        },
+        "B": {
+            "item": "minecraft:diamond"
+        }
+    },
+    "result": {
+        "item": "tacz:ammo",
+        "count": 1,
+        "nbt": "{AmmoId:"tacz:9mm}"
+    }
+}
