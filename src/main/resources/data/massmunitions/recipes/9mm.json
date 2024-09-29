@@ -1,7 +1,7 @@
 {
   "type": "create:sequenced_assembly",
   "ingredient": {
-    "item": "massmunitions:pistolcasing"
+    "item": "minecraft:apple"
   },
   "loops": 1,
   "results": [
@@ -16,15 +16,15 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "massmunitions:incompletepistolcartridge"
+          "item": "minecraft:apple"
         },
         {
-          "item": "massmunitions:primer"
+          "item": "minecraft:apple"
         }
       ],
       "results": [
         {
-          "item": "massmunitions:incompletepistolcartridge"
+          "item": "minecraft:apple"
         }
       ]
     },
@@ -32,7 +32,7 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "massmunitions:incompletepistolcartridge"
+          "item": "minecraft:apple"
         },
         {
           "item": "minecraft:gunpowder"
@@ -40,7 +40,7 @@
       ],
       "results": [
         {
-          "item": "massmunitions:incompletepistolcartridge"
+          "item": "minecraft:apple"
         }
       ]
     },
@@ -48,20 +48,20 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "massmunitions:incompletepistolcartridge"
+          "item": "minecraft:apple"
         },
         {
-          "item": "massmunitions:9mmbullet"
+          "item": "minecraft:apple"
         }
       ],
       "results": [
         {
-          "item": "massmunitions:incompletepistolcartridge"
+          "item": "minecraft:apple"
         }
       ]
     }
   ],
   "transitionalItem": {
-    "item": "massmunitions:incompletepistolcartridge"
+    "item": "minecraft:apple"
   }
 }
