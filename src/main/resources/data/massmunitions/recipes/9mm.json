@@ -1,21 +1,67 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "AAA",
-        "ABA",
-        "AAA"
-    ],
-    "key": {
-        "A": {
-            "item": "minecraft:gold_ingot"
-        },
-        "B": {
-            "item": "minecraft:diamond"
-        }
-    },
-    "result": {
-        "item": "tacz:ammo",
-        "count": 1,
-        "nbt": "{AmmoId:"tacz:9mm}"
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "massmunitions:pistolcasing"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "chance": 100.0,
+      "item": "tacz:ammo"
+      "nbt": "{AmmoId: 9mm}"
     }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "massmunitions:incompletepistolcartridge"
+        },
+        {
+          "item": "massmunitions:primer"
+        }
+      ],
+      "results": [
+        {
+          "item": "massmunitions:incompletepistolcartridge"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "massmunitions:incompletepistolcartridge"
+        },
+        {
+          "item": "minecraft:gunpowder"
+        }
+      ],
+      "results": [
+        {
+          "item": "massmunitions:incompletepistolcartridge"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "massmunitions:incompletepistolcartridge"
+        },
+        {
+          "item": "massmunitions:9mmbullet"
+        }
+      ],
+      "results": [
+        {
+          "item": "massmunitions:incompletepistolcartridge"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "massmunitions:incompletepistolcartridge"
+  }
 }
