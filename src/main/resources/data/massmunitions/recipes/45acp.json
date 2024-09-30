@@ -8,7 +8,12 @@
     {
       "chance": 100.0,
       "item": "tacz:ammo",
-      "nbt": "{AmmoId:tacz:'45acp'}"
+      "nbt": [
+        {
+          "tag": "AmmoId",
+          "value": "tacz:45acp"
+        }
+      ]
     }
   ],
   "sequence": [
