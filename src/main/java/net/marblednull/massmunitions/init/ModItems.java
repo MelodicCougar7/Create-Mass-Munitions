@@ -27,7 +27,7 @@ public class ModItems {
     public static final RegistryObject<Item> C260COIL = ITEMS.register("C260_coil", () -> new Item(new Item.Properties()));
     
     //forms and tools
-    public static final RegistryObject<Item> 9MMCARTFORM = ITEMS.register("9mm_cartridge_form", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> 9MMCARTFORM = ITEMS.register("nine_mm_cartridge_form", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PISTOLCARTPUNCH = ITEMS.register("pistol_cartridge_punch", () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
