@@ -13,8 +13,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import com.tacz.guns.api.event.common.GunShootEvent;
-import net.minecraftforge.world.entity.item.ItemEntity;
-import net.minecraftforge.world.item.ItemStack;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.ItemStack;
 import org.slf4j.Logger;
 
 @Mod(MassMunitions.MODID)
