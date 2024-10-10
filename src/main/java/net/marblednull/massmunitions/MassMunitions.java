@@ -62,7 +62,7 @@ public class MassMunitions
             event.getShooter().level().addFreshEntity(casing);
         }
     }
-}
+    }
 
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value =S Dist.CLIENT)
     public static class ClientModEvents
@@ -79,6 +79,6 @@ public class MassMunitions
         modEventBus.addListener(this::commonSetup);
     //register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-        MinecraftForge.EVENT_BUS.register(new EventTest()); //EventTest needs to be the name of the other class
+        MinecraftForge.EVENT_BUS.register(new shootEvent()); //EventTest needs to be the name of the other class
     }
 }
