@@ -71,7 +71,7 @@ public class MassMunitions
         }
     }
     //help from and credit to Leducklet/Corrineduck
-    public MassMunitions() {
+    public MassMunitions {
         IEventBus modEventBus= FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
     //register ourselves for server and other game events we are interested in
