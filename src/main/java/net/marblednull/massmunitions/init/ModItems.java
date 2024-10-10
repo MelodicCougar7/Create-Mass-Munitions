@@ -13,7 +13,7 @@ public class ModItems {
 
     //casings
     public static final RegistryObject<Item> CASING9MM = ITEMS.register("9mm_casing", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CASING556x45 = ITEMS.register("556x45casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CASING556X45 = ITEMS.register("556x45casing", () -> new Item(new Item.Properties()));
     //ammo
     public static final RegistryObject<Item> PISTOLBULLET = ITEMS.register("pistol_bullet", () -> new Item(new Item.Properties()));
 
