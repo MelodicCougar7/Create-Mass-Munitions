@@ -33,7 +33,7 @@ public class MassMunitions
     {
 
     }
-
+    
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
 
@@ -44,8 +44,16 @@ public class MassMunitions
     {
 
     }
+    public static void shootEvent(GunShootEvent event) {
+        if (event.getLogicalSide().isServer()) {
+           
+            if (event.getGunItemStack().getTag().getString("GunId").equals("tacz:m4a1")) {
+                event.getShooter().addItem(new ItemStack("massmunitions:empty_rifle_casing", 1));
+            }
+        }
+    }
 
-    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value =S Dist.CLIENT)
     public static class ClientModEvents
     {
         @SubscribeEvent
@@ -53,5 +61,13 @@ public class MassMunitions
         {
 
         }
+    }
+    //help from and credit to Leducklet/Corrine
+    public Massmunitions() {
+        IEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        modEventBus.addListener(this::commonSetup);
+    //register ourselves for server and other game events we are interested in
+        MinecraftForge.EVENT_BUS.register(this)
+        MinecraftForge.EVENT_BUS.register(new EventTest()); //EventTest needs to be the name of the other class
     }
 }
