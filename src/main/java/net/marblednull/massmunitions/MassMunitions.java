@@ -44,22 +44,25 @@ public class MassMunitions
     {
 
     }
-    //help from and credit to Leducklet/Corrineduck
+    //help from and credit to Leducklet/Corrineduck and ChatGPT smh
     public static void shootEvent(GunShootEvent event) {
-        if (event.getLogicalSide().isServer()) {
-           
-            if (event.getGunItemStack().getTag().getString("GunId").equals("tacz:m4a1")) {
-                event.getShooter().addItem(ItemEntity casing = new 
-                    ItemEntity(event.getShooter().level(), 
-                               event.getShooter().getX(), 
-                               event.getShooter().getY(), 
-                               event.getShooter().getZ(), new 
-                               ItemStack(ModItems.CASING556X45));
-                               casing.setNoPickUpDelay();
-                    event.getShooter().level().addFreshEntity(casing););
-            }
+    if (event.getLogicalSide().isServer()) {
+        if (event.getGunItemStack().getTag().getString("GunId").equals("tacz:m4a1")) {
+            // Create the casing entity
+            ItemEntity casing = new ItemEntity(
+                event.getShooter().level(),
+                event.getShooter().getX(),
+                event.getShooter().getY(),
+                event.getShooter().getZ(),
+                new ItemStack(ModItems.CASING556X45)
+            );
+            casing.setNoPickUpDelay(); // Prevent the casing from being picked up immediately
+            
+            // Add the casing to the world
+            event.getShooter().level().addFreshEntity(casing);
         }
     }
+}
 
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value =S Dist.CLIENT)
     public static class ClientModEvents
