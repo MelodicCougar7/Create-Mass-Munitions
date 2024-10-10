@@ -54,7 +54,7 @@ public class MassMunitions
                                event.getShooter().getX(), 
                                event.getShooter().getY(), 
                                event.getShooter().getZ(), new 
-                               ItemStack(ModItems.CASING556x45));
+                               ItemStack(ModItems.CASING556X45));
                                casing.setNoPickUpDelay();
                     event.getShooter().level().addFreshEntity(casing););
             }
