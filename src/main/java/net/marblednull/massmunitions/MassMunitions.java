@@ -64,21 +64,18 @@ public class MassMunitions
     }
     }
 
-    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value =S Dist.CLIENT)
-    public static class ClientModEvents
-    {
+    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-
+        public static void onClientSetup(FMLClientSetupEvent event)  {
         }
     }
     //help from and credit to Leducklet/Corrineduck
-    public massmunitions() {
-        IEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public MassMunitions() {
+        IEventBus modEventBus= FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
     //register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-        MinecraftForge.EVENT_BUS.register(new shootEvent()); //EventTest needs to be the name of the other class
+        //EventTest needs to be the name of the other class
     }
 }
