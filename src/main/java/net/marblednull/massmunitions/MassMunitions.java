@@ -74,11 +74,11 @@ public class MassMunitions
         }
     }
     //help from and credit to Leducklet/Corrineduck
-    public Massmunitions() {
+    public massmunitions() {
         IEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
     //register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this)
+        MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new EventTest()); //EventTest needs to be the name of the other class
     }
 }
