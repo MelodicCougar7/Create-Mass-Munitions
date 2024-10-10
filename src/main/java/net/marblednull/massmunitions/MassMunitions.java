@@ -44,11 +44,19 @@ public class MassMunitions
     {
 
     }
+    //help from and credit to Leducklet/Corrineduck
     public static void shootEvent(GunShootEvent event) {
         if (event.getLogicalSide().isServer()) {
            
             if (event.getGunItemStack().getTag().getString("GunId").equals("tacz:m4a1")) {
-                event.getShooter().addItem(new ItemStack("massmunitions:empty_rifle_casing", 1));
+                event.getShooter().addItem(ItemEntity casing = new 
+                    ItemEntity(event.getShooter().level(), 
+                               event.getShooter().getX(), 
+                               event.getShooter().getY(), 
+                               event.getShooter().getZ(), new 
+                               ItemStack(ModItems.CASING556x45));
+                               casing.setNoPickUpDelay();
+                    event.getShooter().level().addFreshEntity(casing););
             }
         }
     }
@@ -62,7 +70,7 @@ public class MassMunitions
 
         }
     }
-    //help from and credit to Leducklet/Corrine
+    //help from and credit to Leducklet/Corrineduck
     public Massmunitions() {
         IEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
