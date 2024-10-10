@@ -70,12 +70,5 @@ public class MassMunitions
         public static void onClientSetup(FMLClientSetupEvent event)  {
         }
     }
-    //help from and credit to Leducklet/Corrineduck
-    public MassMunitions() {
-        IEventBus modEventBus= FMLJavaModLoadingContext.get().getModEventBus();
-        modEventBus.addListener(this::commonSetup);
-    //register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
-        //EventTest needs to be the name of the other class
-    }
+
 }
