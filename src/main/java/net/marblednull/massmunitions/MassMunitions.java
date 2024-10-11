@@ -48,6 +48,7 @@ public class MassMunitions
 
     }
     //help from and credit to Leducklet/Corrineduck and ChatGPT smh
+    @SubscribeEvent
     public static void shootEvent(GunShootEvent event) {
     if (event.getLogicalSide().isServer()) {
         if (event.getGunItemStack().getTag().getString("GunId").equals("tacz:m4a1")) {
