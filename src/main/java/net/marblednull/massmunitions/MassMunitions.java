@@ -1,123 +1,61 @@
 package net.marblednull.massmunitions;
 
-import com.tacz.guns.api.event.common.GunShootEvent;
+import com.mojang.logging.LogUtils;
 import net.marblednull.massmunitions.init.ModItems;
-import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import com.tacz.guns.api.event.common.GunShootEvent;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.ItemStack;
+import org.slf4j.Logger;
 
-@Mod.EventBusSubscriber
-public class ModEvents {
-    //help from and credit to Leducklet/Corrineduck and ChatGPT smh
+@Mod(MassMunitions.MODID)
+public class MassMunitions
+{
+    public static final String MODID = "massmunitions";
+    private static final Logger LOGGER = LogUtils.getLogger();
+
+    public MassMunitions()
+    {
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        modEventBus.addListener(this::commonSetup);
+        MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(ModEvents.class);
+
+        ModItems.register(modEventBus);
+
+    }
+
+    private void commonSetup(final FMLCommonSetupEvent event)
+    {
+
+    }
+    
+    private void addCreative(BuildCreativeModeTabContentsEvent event)
+    {
+
+    }
+
     @SubscribeEvent
-    public static void rifleShootEvent(GunShootEvent event) {
-        if (event.getLogicalSide().isServer()) {
-            for (String stringiterator : Config.RIFLELIST.get()) {
-                if (event.getGunItemStack().getTag().getString("GunId").equals(stringiterator)) {
-                    if (event.getShooter().getMainHandItem().getTag().getString("GunFireMode").equals("BURST")) {
-                        //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYRIFLECARTRIDGE.get(), 3));
-                        casing.setNoPickUpDelay();
-                        //Add casing
-                        event.getShooter().level().addFreshEntity(casing);
-                    } else {
-                        //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYRIFLECARTRIDGE.get()));
-                        casing.setNoPickUpDelay();
-                        //Add casing
-                        event.getShooter().level().addFreshEntity(casing);
-                    }
-                }
-            }
+    public void onServerStarting(ServerStartingEvent event)
+    {
+
+    }
+
+
+    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event)  {
         }
     }
-    @SubscribeEvent
-    public static void pistolShootEvent(GunShootEvent event) {
-        if (event.getLogicalSide().isServer()) {
-            for (String stringiterator : Config.PISTOLLIST.get()) {
-                if (event.getGunItemStack().getTag().getString("GunId").equals(stringiterator)) {
-                    if (event.getShooter().getMainHandItem().getTag().getString("GunFireMode").equals("BURST")) {
-                        //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYPISTOLCARTRIDGE.get(), 3));
-                        casing.setNoPickUpDelay();
-                        //Add casing
-                        event.getShooter().level().addFreshEntity(casing);
-                    } else {
-                        //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYPISTOLCARTRIDGE.get()));
-                        casing.setNoPickUpDelay();
-                        //Add casing
-                        event.getShooter().level().addFreshEntity(casing);
-                    }
-                }
-            }
-        }
-    }
-    @SubscribeEvent
-    public static void heavyPistolShootEvent(GunShootEvent event) {
-        if (event.getLogicalSide().isServer()) {
-            for (String stringiterator : Config.HEAVYPISTOLLIST.get()) {
-                if (event.getGunItemStack().getTag().getString("GunId").equals(stringiterator)) {
-                    if (event.getShooter().getMainHandItem().getTag().getString("GunFireMode").equals("BURST")) {
-                        //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYHEAVYPISTOLCARTRIDGE.get(), 3));
-                        casing.setNoPickUpDelay();
-                        //Add casing
-                        event.getShooter().level().addFreshEntity(casing);
-                    } else {
-                        //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYHEAVYPISTOLCARTRIDGE.get()));
-                        casing.setNoPickUpDelay();
-                        //Add casing
-                        event.getShooter().level().addFreshEntity(casing);
-                    }
-                }
-            }
-        }
-    }
-    @SubscribeEvent
-    public static void sniperShootEvent(GunShootEvent event) {
-        if (event.getLogicalSide().isServer()) {
-            for (String stringiterator : Config.SNIPERLIST.get()) {
-                if (event.getGunItemStack().getTag().getString("GunId").equals(stringiterator)) {
-                    if (event.getShooter().getMainHandItem().getTag().getString("GunFireMode").equals("BURST")) {
-                        //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYSNIPERCARTRIDGE.get(), 3));
-                        casing.setNoPickUpDelay();
-                        //Add casing
-                        event.getShooter().level().addFreshEntity(casing);
-                    } else {
-                        //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYSNIPERCARTRIDGE.get()));
-                        casing.setNoPickUpDelay();
-                        //Add casing
-                        event.getShooter().level().addFreshEntity(casing);
-                    }
-                }
-            }
-        }
-    }
-    @SubscribeEvent
-    public static void rifleShootEvent(GunShootEvent event) {
-        if (event.getLogicalSide().isServer()) {
-            for (String stringiterator : Config.SHOTGUNLIST.get()) {
-                if (event.getGunItemStack().getTag().getString("GunId").equals(stringiterator)) {
-                    if (event.getShooter().getMainHandItem().getTag().getString("GunFireMode").equals("BURST")) {
-                        //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYSHOTGUNSHELL.get(), 3));
-                        casing.setNoPickUpDelay();
-                        //Add casing
-                        event.getShooter().level().addFreshEntity(casing);
-                    } else {
-                        //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYSHOTGUNSHELL.get()));
-                        casing.setNoPickUpDelay();
-                        //Add casing
-                        event.getShooter().level().addFreshEntity(casing);
-                    }
-                }
-            }
-        }
-    }
+
 }
