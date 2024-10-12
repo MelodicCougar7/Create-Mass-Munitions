@@ -24,10 +24,10 @@ public class ModItems {
 
     //ammo
     public static final RegistryObject<Item> PISTOLBULLET = ITEMS.register("pistol_bullet", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> SNIPERBULLET = ITEMS.register("pistol_bullet", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> RIFLEBULLET = ITEMS.register("pistol_bullet", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> HEAVYPISTOLBULLET = ITEMS.register("pistol_bullet", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> SHOT = ITEMS.register("pistol_bullet", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SNIPERBULLET = ITEMS.register("sniper_bullet", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RIFLEBULLET = ITEMS.register("rifle_bullet", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> HEAVYPISTOLBULLET = ITEMS.register("heavy_pistol_bullet", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SHOT = ITEMS.register("shot", () -> new Item(new Item.Properties()));
 
     //misc
     public static final RegistryObject<Item> PRIMER = ITEMS.register("primer", () -> new Item(new Item.Properties()));
