@@ -99,7 +99,7 @@ public class ModEvents {
         }
     }
     @SubscribeEvent
-    public static void rifleShootEvent(GunShootEvent event) {
+    public static void shotgunShootEvent(GunShootEvent event) {
         if (event.getLogicalSide().isServer()) {
             for (String stringiterator : Config.SHOTGUNLIST.get()) {
                 if (event.getGunItemStack().getTag().getString("GunId").equals(stringiterator)) {
