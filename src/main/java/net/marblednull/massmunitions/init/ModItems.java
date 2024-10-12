@@ -40,6 +40,11 @@ public class ModItems {
     public static final RegistryObject<Item> C260COIL = ITEMS.register("c260_coil", () -> new Item(new Item.Properties()));
 
     //empties
+    public static final RegistryObject<Item> EMPTYHEAVYPISTOLCARTRIDGE = ITEMS.register("empty_heavy_pistol_cartridge", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> EMPTYPISTOLCARTRIDGE = ITEMS.register("empty_pistol_cartridge", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> EMPTYRIFLECARTRIDGE = ITEMS.register("empty_rifle_cartridge", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> EMPTYSHOTGUNSHELL = ITEMS.register("empty_shotgun_shell", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> EMPTYSNIPERCARTRIDGE = ITEMS.register("empty_sniper_cartridge", () -> new Item(new Item.Properties()));
 
     //transitional items
     
