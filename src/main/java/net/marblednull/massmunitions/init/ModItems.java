@@ -29,7 +29,6 @@ public class ModItems {
     public static final RegistryObject<Item> HEAVYPISTOLBULLET = ITEMS.register("pistol_bullet", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SHOT = ITEMS.register("pistol_bullet", () -> new Item(new Item.Properties()));
 
-
     //misc
     public static final RegistryObject<Item> PRIMER = ITEMS.register("primer", () -> new Item(new Item.Properties()));
 
@@ -47,7 +46,12 @@ public class ModItems {
     public static final RegistryObject<Item> EMPTYSNIPERCARTRIDGE = ITEMS.register("empty_sniper_cartridge", () -> new Item(new Item.Properties()));
 
     //transitional items
-    
+    public static final RegistryObject<Item> INCOMPLETEHEAVYPISTOLCARTRIDGE = ITEMS.register("incomplete_heavy_pistol_cartridge", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> INCOMPLETEPISTOLCARTRIDGE = ITEMS.register("incomplete_pistol_cartridge", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> INCOMPLETERIFLECARTRIDGE = ITEMS.register("incomplete_rifle_cartridge", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> INCOMPLETESHOTGUNSHELL = ITEMS.register("incomplete_shotgun_shell", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> INCOMPLETESNIPERCARTRIDGE = ITEMS.register("incomplete_sniper_cartridge", () -> new Item(new Item.Properties()));
+
     //forms and tools
     public static final RegistryObject<Item> CARTFORM9MM = ITEMS.register("9mm_cartridge_form", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PISTOLCARTPUNCH = ITEMS.register("pistol_cartridge_punch", () -> new Item(new Item.Properties()));
