@@ -12,6 +12,9 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import com.tacz.guns.api.event.common.GunShootEvent;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.ItemStack;
 import org.slf4j.Logger;
 
 @Mod(MassMunitions.MODID)
@@ -25,15 +28,17 @@ public class MassMunitions
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(ModEvents.class);
 
         ModItems.register(modEventBus);
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
 
     }
-
+    
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
 
@@ -45,13 +50,12 @@ public class MassMunitions
 
     }
 
-    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
 
+    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event)  {
         }
     }
+
 }
