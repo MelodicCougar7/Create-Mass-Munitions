@@ -12,10 +12,23 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, MassMunitions.MODID);
 
     //casings
+    public static final RegistryObject<Item> CASING45ACP = ITEMS.register("45scp_casing", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CASING9MM = ITEMS.register("9mm_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CASING338 = ITEMS.register("338_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CASING308 = ITEMS.register("308_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CASING357MAG = ITEMS.register("357mag_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CASING50B = ITEMS.register("50b_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CASING12G = ITEMS.register("12g_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CASING50AE = ITEMS.register("50ae_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CASING556X45 = ITEMS.register("556x45_casing", () -> new Item(new Item.Properties()));
 
     //ammo
     public static final RegistryObject<Item> PISTOLBULLET = ITEMS.register("pistol_bullet", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SNIPERBULLET = ITEMS.register("pistol_bullet", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RIFLEBULLET = ITEMS.register("pistol_bullet", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> HEAVYPISTOLBULLET = ITEMS.register("pistol_bullet", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SHOT = ITEMS.register("pistol_bullet", () -> new Item(new Item.Properties()));
+
 
     //misc
     public static final RegistryObject<Item> PRIMER = ITEMS.register("primer", () -> new Item(new Item.Properties()));
