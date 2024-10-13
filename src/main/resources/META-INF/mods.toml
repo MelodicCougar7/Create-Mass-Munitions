@@ -4,7 +4,7 @@ license="Apache-2.0 License"
 
 [[mods]]
 modId="massmunitions"
-version="1.0.0"
+version="1.20.1-1.0.0"
 displayName="Create: Mass Munitions"
 displayURL="test1 / test2"
 logoFile="cmm_logo.png"
@@ -18,17 +18,27 @@ description='''A mod that adds mass production compatibility between Create and 
     versionRange="${forge_version_range}"
     ordering="NONE"
     side="BOTH"
-
 [[dependencies.massmunitions]]
     modId="minecraft"
     mandatory=true
     versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
-
 [[dependencies.massmunitions]]
 modId="create"
 mandatory=true
-versionRange="${minecraft_version_range}"
+versionRange="0.5.1.h,"
+ordering="NONE"
+side="BOTH"
+[[dependencies.massmunitions]]
+modId="pointblank"
+mandatory=true
+versionRange="1.7.6,"
+ordering="NONE"
+side="BOTH"
+[[dependencies.massmunitions]]
+modId="tacz"
+mandatory=true
+versionRange="1.0.3,"
 ordering="NONE"
 side="BOTH"
