@@ -25,3 +25,10 @@ description='''A mod that adds mass production compatibility between Create and 
     versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
+
+[[dependencies.massmunitions]]
+modId="create"
+mandatory=true
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"
