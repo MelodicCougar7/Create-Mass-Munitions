@@ -20,11 +20,11 @@ public class Config {
         BUILDER.pop();
 
         BUILDER.push("pistollist");
-      PISTOLLIST = BUILDER.comment("Designate pistols and smgs to have them drop pistol casings upon use.").defineList("pistollist", List.of("tacz:glock_17", "tacz:cz_75", "tacz:p320", "tacz:uzi", "tacz:ump45", "tacz:hk_mp", "tacz:vector45"), entry -> true);
+      PISTOLLIST = BUILDER.comment("Designate pistols and smgs to have them drop pistol casings upon use.").defineList("pistollist", List.of("tacz:glock_17", "tacz:cz_75", "tacz:p320", "tacz:uzi", "tacz:ump45", "tacz:hk_mp5a5", "tacz:vector45"), entry -> true);
         BUILDER.pop();
 
         BUILDER.push("heavypistollist");
-        HEAVYPISTOLLIST = BUILDER.comment("Designate heavy pistols to have them drop pistol casings upon use. Redundant atm").defineList("heavypistollist", List.of("tacz:deagle", "tacz:golden_deagle"), entry -> true);
+        HEAVYPISTOLLIST = BUILDER.comment("Designate heavy pistols to have them drop pistol casings upon use. Redundant atm").defineList("heavypistollist", List.of("tacz:deagle", "tacz:deagle_golden"), entry -> true);
         BUILDER.pop();
 
         BUILDER.push("sniperlist");
