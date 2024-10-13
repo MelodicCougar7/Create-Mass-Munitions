@@ -1,7 +1,14 @@
 package net.marblednull.massmunitions;
 
 import com.mojang.logging.LogUtils;
+import net.marblednull.massmunitions.init.ModBlocks;
+import net.marblednull.massmunitions.init.ModTabs;
+import net.marblednull.massmunitions.init.fluid.ModFluidTypes;
+import net.marblednull.massmunitions.init.fluid.ModFluids;
 import net.marblednull.massmunitions.init.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.layers.RenderLayer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -12,9 +19,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import com.tacz.guns.api.event.common.GunShootEvent;
-import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.item.ItemStack;
 import org.slf4j.Logger;
 
 @Mod(MassMunitions.MODID)
@@ -31,7 +35,10 @@ public class MassMunitions
         MinecraftForge.EVENT_BUS.register(ModEvents.class);
 
         ModItems.register(modEventBus);
-
+        ModFluids.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        ModFluidTypes.register(modEventBus);
+        ModTabs.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -55,7 +62,7 @@ public class MassMunitions
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)  {
+
         }
     }
-
 }
