@@ -12,7 +12,7 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, MassMunitions.MODID);
 
     //casings
-    public static final RegistryObject<Item> CASING45ACP = ITEMS.register("45scp_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CASING45ACP = ITEMS.register("45acp_casing", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CASING9MM = ITEMS.register("9mm_casing", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CASING338 = ITEMS.register("338_casing", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CASING308 = ITEMS.register("308_casing", () -> new Item(new Item.Properties()));
