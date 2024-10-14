@@ -1,81 +1,81 @@
 {
-  "type": "create:sequenced_assembly",
-  "ingredient": {
-    "item": "massmunitions:9mm_casing"
-  },
-  "loops": 1,
-  "results": [
-    {
-      "chance": 100.0,
-      "item": "tacz:ammo",
-      "nbt": "{AmmoId: 'tacz:9mm'}"
+    "type": "create:sequenced_assembly",
+    "ingredient": {
+      "item": "massmunitions:9mm_casing"
+    },
+    "loops": 1,
+    "results": [
+      {
+        "chance": 100.0,
+        "item": "tacz:ammo",
+        "nbt": "{AmmoId: 'tacz:9mm'}"
+      }
+    ],
+    "sequence": [
+      {
+        "type": "create:deploying",
+        "ingredients": [
+          {
+            "item": "massmunitions:incomplete_pistol_cartridge"
+          },
+          {
+            "item": "massmunitions_primer"
+          }
+        ],
+        "results": [
+          {
+            "item": "massmunitions:incomplete_pistol_cartridge"
+          }
+        ]
+      },
+      {
+        "type": "create:filling",
+        "ingredients": [
+          {
+            "item": "massmunitions:incomplete_pistol_cartridge"
+          },
+          {
+            "amount": 5,
+            "fluid": "massmunition:whisked_gunpowder_fluid",
+            "nbt": {}
+          }
+        ],
+        "results": [
+          {
+            "item": "massmunitions:incomplete_pistol_cartridge"
+          }
+        ]
+      },
+      {
+        "type": "create:deploying",
+        "ingredients": [
+          {
+            "item": "massmunitions:pistol_bullet"
+          },
+          {
+            "item": "massmunitions:incomplete_pistol_cartridge"
+          }
+        ],
+        "results": [
+          {
+            "item": "massmunitions:incomplete_pistol_cartridge"
+          }
+        ]
+      },
+       {
+        "type": "create:pressing",
+        "ingredients": [
+          {
+            "item": "massmunitions:incomplete_pistol_cartridge"
+          }
+        ],
+        "results": [
+          {
+            "item": "massmunitions:incomplete_pistol_cartridge"
+          }
+        ]
+      } ],
+    "transitionalItem": {
+      "item": "massmunitions:incomplete_pistol_cartridge"
     }
-  ],
-  "sequence": [
-    {
-      "type": "create:deploying",
-      "ingredients": [
-        {
-          "item": "massmunitions:incomplete_pistol_cartridge"
-        },
-        {
-          "item": "massmunitions_primer"
-        }
-      ],
-      "results": [
-        {
-          "item": "massmunitions:incomplete_pistol_cartridge"
-        }
-      ]
-    },
-    {
-      "type": "create:filling",
-      "ingredients": [
-        {
-          "item": "massmunitions:incomplete_pistol_cartridge"
-        },
-        {
-          "amount": 5,
-          "fluid": "massmunition:whisked_gunpowder_fluid",
-          "nbt": {}
-        }
-      ],
-      "results": [
-        {
-          "item": "massmunitions:incomplete_pistol_cartridge"
-        }
-      ]
-    },
-    {
-      "type": "create:deploying",
-      "ingredients": [
-        {
-          "item": "massmunitions:pistol_bullet"
-        },
-        {
-          "item": "massmunitions:incomplete_pistol_cartridge"
-        }
-      ],
-      "results": [
-        {
-          "item": "massmunitions:incomplete_pistol_cartridge"
-        }
-      ]
-    },
-     {
-      "type": "create:pressing",
-      "ingredients": [
-        {
-          "item": "massmunitions:incomplete_pistol_cartridge"
-        }
-      ],
-      "results": [
-        {
-          "item": "massmunitions:incomplete_pistol_cartridge"
-        }
-      ]
-    },
-  "transitionalItem": {
-    "item": "massmunitions:incomplete_pistol_cartridge"
   }
-}
