@@ -1,7 +1,7 @@
 {
   "type": "create:sequenced_assembly",
   "ingredient": {
-    "item": "minecraft:apple"
+    "item": "massmunitions:9mm_casing"
   },
   "loops": 1,
   "results": [
@@ -16,15 +16,33 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "minecraft:apple"
+          "item": "massmunitions:incomplete_pistol_cartridge"
         },
         {
-          "item": "minecraft:apple"
+          "item": "massmunitions_primer"
         }
       ],
       "results": [
         {
-          "item": "minecraft:apple"
+          "item": "massmunitions:incomplete_pistol_cartridge"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "massmunitions:incomplete_pistol_cartridge"
+        },
+        {
+          "amount": 5,
+          "fluid": "massmunition:whisked_gunpowder",
+          "nbt": {}
+        }
+      ],
+      "results": [
+        {
+          "item": "massmunitions:incomplete_pistol_cartridge"
         }
       ]
     },
@@ -32,36 +50,32 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "minecraft:apple"
+          "item": "massmunitions:pistol_bullet"
         },
         {
-          "item": "minecraft:gunpowder"
+          "item": "massmunitions:incomplete_pistol_cartridge"
         }
       ],
       "results": [
         {
-          "item": "minecraft:apple"
+          "item": "massmunitions:incomplete_pistol_cartridge"
         }
       ]
     },
-    {
-      "type": "create:deploying",
+     {
+      "type": "create:pressing",
       "ingredients": [
         {
-          "item": "minecraft:apple"
-        },
-        {
-          "item": "minecraft:apple"
+          "item": "massmunitions:incomplete_pistol_cartridge"
         }
       ],
       "results": [
         {
-          "item": "minecraft:apple"
+          "item": "massmunitions:incomplete_pistol_cartridge"
         }
       ]
-    }
-  ],
+    },
   "transitionalItem": {
-    "item": "minecraft:apple"
+    "item": "massmunitions:incomplete_pistol_cartridge"
   }
 }
