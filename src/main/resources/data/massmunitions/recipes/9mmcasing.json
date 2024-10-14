@@ -1,4 +1,3 @@
-
 {
   "type": "create:sequenced_assembly",
   "ingredient": {
@@ -63,7 +62,7 @@
           "item": "massmunitions:incomplete_9mm_casing"
         },
         {
-          "item": "massmunitions:9mm_cartridge_form"
+          "item": "massmunitions:9mm_cartridge_punch"
         }
       ],
       "results": [
