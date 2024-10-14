@@ -39,7 +39,7 @@ public class ModEvents {
                 if (event.getGunItemStack().getTag().getString("GunId").equals(stringiterator)) {
                     if (event.getShooter().getMainHandItem().getTag().getString("GunFireMode").equals("BURST")) {
                         //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYPISTOLCARTRIDGE.get(), 3));
+                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYPISTOLCARTRIDGE.get(), 2));
                         casing.setNoPickUpDelay();
                         //Add casing
                         event.getShooter().level().addFreshEntity(casing);
