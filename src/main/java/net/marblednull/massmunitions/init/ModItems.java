@@ -43,7 +43,7 @@ public class ModItems {
     public static final RegistryObject<Item> C260NUGGET = ITEMS.register("c260_nugget", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> C260SHEET = ITEMS.register("c260_sheet", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> C260COIL = ITEMS.register("c260_coil", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> C260PLATE = ITEMS.register("c260_plate"), () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> C260PLATE = ITEMS.register("c260_plate", () -> new Item(new Item.Properties()));
 
     //empties
     public static final RegistryObject<Item> EMPTYHEAVYPISTOLCARTRIDGE = ITEMS.register("empty_heavy_pistol_cartridge", () -> new Item(new Item.Properties()));
