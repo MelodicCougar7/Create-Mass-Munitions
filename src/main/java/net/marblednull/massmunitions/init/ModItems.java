@@ -59,7 +59,16 @@ public class ModItems {
     public static final RegistryObject<Item> INCOMPLETESHOTGUNSHELL = ITEMS.register("incomplete_shotgun_shell", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> INCOMPLETESNIPERCARTRIDGE = ITEMS.register("incomplete_sniper_cartridge", () -> new Item(new Item.Properties()));
 
-    //forms and tools
+    public static final RegistryObject<Item> INCOMPLETE9MMCASING = ITEMS.register("incomplete_9mm_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> INCOMPLETE45ACPCASING = ITEMS.register("incomplete_45acp_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> INCOMPLETE388CASING = ITEMS.register("incomplete_388_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> INCOMPLETE308CASING = ITEMS.register("incomplete_308_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> INCOMPLETE357MAGCASING = ITEMS.register("incomplete_357mag_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> INCOMPLETE50BMGCASING = ITEMS.register("incomplete_50bmg_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> INCOMPLETE12GCASING = ITEMS.register("incomplete_12g_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> INCOMPLETE50AECASING = ITEMS.register("incomplete_50ae_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> INCOMPLETE556X45CASING = ITEMS.register("incomplete_556x45_casing", () -> new Item(new Item.Properties()));
+  
     public static final RegistryObject<Item> CARTFORM9MM = ITEMS.register("9mm_cartridge_form", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PISTOLCARTPUNCH = ITEMS.register("pistol_cartridge_punch", () -> new Item(new Item.Properties()));
 
