@@ -11,22 +11,22 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModFluids {
-    public static final DeferredRegister<Fluid> FLUIDS =
+    /*public static final DeferredRegister<Fluid> FLUIDS =
             DeferredRegister.create(ForgeRegistries.FLUIDS, MassMunitions.MODID);
 
-    //public static final RegistryObject<FlowingFluid> WHISKED_GUNPOWDER_SOURCE = FLUIDS.register("whisked_gunpowder_source",
-            //() -> new ForgeFlowingFluid.Source(ModFluids.WHISKED_GUNPOWDER_FLUID_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> WHISKED_GUNPOWDER_SOURCE = FLUIDS.register("whisked_gunpowder_source",
+            () -> new ForgeFlowingFluid.Source(ModFluids.WHISKED_GUNPOWDER_FLUID_PROPERTIES));
 
-    //public static final RegistryObject<FlowingFluid> WHISKED_GUNPOWDER_FLOWING = FLUIDS.register("whisked_gunpowder_flowing",
-            //() -> new ForgeFlowingFluid.Flowing(ModFluids.WHISKED_GUNPOWDER_FLUID_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> WHISKED_GUNPOWDER_FLOWING = FLUIDS.register("whisked_gunpowder_flowing",
+            () -> new ForgeFlowingFluid.Flowing(ModFluids.WHISKED_GUNPOWDER_FLUID_PROPERTIES));
 
 
-    //public static final ForgeFlowingFluid.Properties WHISKED_GUNPOWDER_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
-            //ModFluidTypes.WHISKED_GUNPOWDER_FLUID, WHISKED_GUNPOWDER_SOURCE, WHISKED_GUNPOWDER_FLOWING)
-            //.slopeFindDistance(2).levelDecreasePerBlock(2).block(ModBlocks.WHISKED_GUNPOWDER_BLOCK);
+    public static final ForgeFlowingFluid.Properties WHISKED_GUNPOWDER_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
+            ModFluidTypes.WHISKED_GUNPOWDER_FLUID, WHISKED_GUNPOWDER_SOURCE, WHISKED_GUNPOWDER_FLOWING)
+            .slopeFindDistance(2).levelDecreasePerBlock(2).block(ModBlocks.WHISKED_GUNPOWDER_BLOCK);
 
 
     public static void register(IEventBus eventBus) {
         FLUIDS.register(eventBus);
-    }
+    }*/
 }
