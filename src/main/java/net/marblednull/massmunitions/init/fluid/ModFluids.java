@@ -15,7 +15,7 @@ public class ModFluids {
     public static final DeferredRegister<Fluid> FLUIDS =
             DeferredRegister.create(ForgeRegistries.FLUIDS, MassMunitions.MODID);
 
-    public static final RegistryObject<FlowingFluid> WHISKED_GUNPOWDER_STILL = FLUIDS.register("whisked_gunpowder_still",
+    public static final RegistryObject<FlowingFluid> WHISKED_GUNPOWDER = FLUIDS.register("whisked_gunpowder",
             () -> new ForgeFlowingFluid.Source(ModFluids.WHISKED_GUNPOWDER_FLUID_PROPERTIES));
 
     public static final RegistryObject<FlowingFluid> WHISKED_GUNPOWDER_FLOWING = FLUIDS.register("whisked_gunpowder_flowing",
@@ -23,7 +23,7 @@ public class ModFluids {
 
 
     public static final ForgeFlowingFluid.Properties WHISKED_GUNPOWDER_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
-            ModFluidTypes.WHISKED_GUNPOWDER, WHISKED_GUNPOWDER_STILL, WHISKED_GUNPOWDER_FLOWING)
+            ModFluidTypes.WHISKED_GUNPOWDER_FLUID, WHISKED_GUNPOWDER, WHISKED_GUNPOWDER_FLOWING)
             .slopeFindDistance(2).levelDecreasePerBlock(2).block(ModBlocks.WHISKED_GUNPOWDER_BLOCK)
             .bucket(ModItems.WHISKED_GUNPOWER_BUCKET);
 
