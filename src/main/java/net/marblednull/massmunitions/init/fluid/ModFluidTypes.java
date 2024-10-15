@@ -13,7 +13,7 @@ import org.joml.Vector3f;
 
 public class ModFluidTypes {
     public static final ResourceLocation WHISKED_GUNPOWDER_STILL_RL = new ResourceLocation("block/whisked_gunpowder_flow");
-    public static final ResourceLocation WHISKED_GUNPOWDER_RL = new ResourceLocation("block/whisked_gunpowder_still");
+    public static final ResourceLocation WHISKED_GUNPOWDER_RL = new ResourceLocation("block/whisked_gunpowder");
     public static final ResourceLocation WHISKED_GUNPOWDER_OVERLAY_RL = new ResourceLocation("block/whisked_gunpowder_overlay");
 
     public static final DeferredRegister<FluidType> FLUID_TYPES =
