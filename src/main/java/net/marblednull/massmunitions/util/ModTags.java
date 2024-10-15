@@ -18,7 +18,7 @@ public class ModTags {
 
     public static class Items {
 
-        public static final TagKey<Item> PISTL_BULLET = tag("pistol_bullet");
+        public static final TagKey<Item> PISTOL_BULLET = tag("pistol_bullet");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(MassMunitions.MODID, name));
