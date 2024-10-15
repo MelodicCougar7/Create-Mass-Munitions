@@ -62,5 +62,6 @@ public class MassMunitions
         //dev
         public static void onCommonSetup(FMLCommonSetupEvent event) {
         ModFluidTypes.register(event.getModEventBus());
+        }
     }
 }
