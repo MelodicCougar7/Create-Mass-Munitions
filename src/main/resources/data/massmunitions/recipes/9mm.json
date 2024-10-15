@@ -36,7 +36,7 @@
           },
           {
             "amount": 5,
-            "fluid": "minecraft:water",
+            "fluid": "massmunitions:whisked_gunpowder_fluid",
             "nbt": {}
           }
         ],
@@ -50,10 +50,10 @@
         "type": "create:deploying",
         "ingredients": [
           {
-            "item": "massmunitions:pistol_bullet"
+            "item": "massmunitions:incomplete_pistol_cartridge"
           },
           {
-            "item": "massmunitions:incomplete_pistol_cartridge"
+            "item": "massmunitions:pistol_bullet"
           }
         ],
         "results": [
