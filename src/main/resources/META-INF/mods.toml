@@ -24,3 +24,21 @@ description='''A mod that adds mass production compatibility between Create and 
     versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
+[[dependencies.massmunitions]]
+    modId="create"
+    mandatory=true
+    versionRange="0.5.1.h,"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.massmunitions]]
+    modId="pointblank"
+    mandatory=false
+    versionRange="1.7.6,"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.massmunitions]]
+    modId="tacz"
+    mandatory=false
+    versionRange="1.0.3,"
+    ordering="NONE"
+    side="BOTH"
