@@ -44,7 +44,7 @@ public class ModTabs {
                         pOutput.accept(ModItems.INCOMPLETESHOTGUNSHELL.get());
                         pOutput.accept(ModItems.INCOMPLETESNIPERCARTRIDGE.get());
                         pOutput.accept(ModItems.PRIMER.get());
-                        pOutput.accept(ModItems.WHISKED_GUNPOWER_BUCKET.get());
+                        //pOutput.accept(ModItems.WHISKED_GUNPOWER_BUCKET.get());
 
                     })
                     .build()

@@ -34,10 +34,10 @@ public class MassMunitions
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(ModEvents.class);
 
+        //ModFluids.register(modEventBus);
+        //ModFluidTypes.register(modEventBus);
         ModItems.register(modEventBus);
-        ModFluids.register(modEventBus);
         ModBlocks.register(modEventBus);
-        ModFluidTypes.register(modEventBus);
         ModTabs.register(modEventBus);
     }
 
