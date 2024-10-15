@@ -23,7 +23,7 @@ public class ModFluids {
 
 
     public static final ForgeFlowingFluid.Properties WHISKED_GUNPOWDER_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
-            ModFluidTypes.WHISKED_GUNPOWDER_FLUID, WHISKED_GUNPOWDER, WHISKED_GUNPOWDER_FLOWING)
+            ModFluidTypes.WHISKED_GUNPOWDER, WHISKED_GUNPOWDER, WHISKED_GUNPOWDER_FLOWING)
             .slopeFindDistance(2).levelDecreasePerBlock(2).block(ModBlocks.WHISKED_GUNPOWDER_BLOCK)
             .bucket(ModItems.WHISKED_GUNPOWER_BUCKET);
 
