@@ -1,6 +1,8 @@
 package net.marblednull.massmunitions;
 
 import com.mojang.logging.LogUtils;
+import net.marblednull.massmunitions.init.Fluid.ModFluidTypes;
+import net.marblednull.massmunitions.init.Fluid.ModFluids;
 import net.marblednull.massmunitions.init.ModBlocks;
 import net.marblednull.massmunitions.init.ModItems;
 import net.marblednull.massmunitions.init.ModTabs;
@@ -29,6 +31,8 @@ public class MassMunitions
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(ModEvents.class);
 
+        ModFluids.register(modEventBus);
+        ModFluidTypes.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModTabs.register(modEventBus);
