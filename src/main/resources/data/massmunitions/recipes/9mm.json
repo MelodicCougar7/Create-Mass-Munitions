@@ -36,7 +36,7 @@
           },
           {
             "amount": 5,
-            "fluid": "massmunition:whisked_gunpowder_fluid",
+            "fluid": "minecraft:water",
             "nbt": {}
           }
         ],
