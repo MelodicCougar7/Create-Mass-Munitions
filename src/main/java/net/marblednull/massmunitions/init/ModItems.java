@@ -31,7 +31,7 @@ public class ModItems {
 
     //misc
     public static final RegistryObject<Item> PRIMER = ITEMS.register("primer", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> WHISKED_GUNPOWER_BUCKET = ITEMS.register("whisked_gunpowder_bucket", () -> new BucketItem(ModFluids.WHISKED_GUNPOWDER,new Item.Properties().stacksTo(1).craftRemainder(Items.BUCKET)));
+
     //materials
     public static final RegistryObject<Item> C260INGOT = ITEMS.register("c260_ingot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> C260NUGGET = ITEMS.register("c260_nugget", () -> new Item(new Item.Properties()));

@@ -2,13 +2,8 @@ package net.marblednull.massmunitions;
 
 import com.mojang.logging.LogUtils;
 import net.marblednull.massmunitions.init.ModBlocks;
-import net.marblednull.massmunitions.init.ModTabs;
-import net.marblednull.massmunitions.init.fluid.ModFluidTypes;
-import net.marblednull.massmunitions.init.fluid.ModFluids;
 import net.marblednull.massmunitions.init.ModItems;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.entity.layers.RenderLayer;
+import net.marblednull.massmunitions.init.ModTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -34,8 +29,6 @@ public class MassMunitions
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(ModEvents.class);
 
-        //ModFluids.register(modEventBus);
-        //ModFluidTypes.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModTabs.register(modEventBus);
