@@ -1,67 +1,81 @@
 {
-  "type": "create:sequenced_assembly",
-  "ingredient": {
-    "item": "minecraft:apple"
-  },
-  "loops": 1,
-  "results": [
-    {
-      "chance": 100.0,
-      "item": "tacz:ammo",
-      "nbt": "{AmmoId: 'tacz:9mm'}"
-    }
-  ],
-  "sequence": [
-    {
-      "type": "create:deploying",
-      "ingredients": [
-        {
-          "item": "minecraft:apple"
-        },
-        {
-          "item": "minecraft:apple"
-        }
-      ],
-      "results": [
-        {
-          "item": "minecraft:apple"
-        }
-      ]
+    "type": "create:sequenced_assembly",
+    "ingredient": {
+      "item": "massmunitions:9mm_casing"
     },
-    {
-      "type": "create:deploying",
-      "ingredients": [
-        {
-          "item": "minecraft:apple"
-        },
-        {
-          "item": "minecraft:gunpowder"
-        }
-      ],
-      "results": [
-        {
-          "item": "minecraft:apple"
-        }
-      ]
-    },
-    {
-      "type": "create:deploying",
-      "ingredients": [
-        {
-          "item": "minecraft:apple"
-        },
-        {
-          "item": "minecraft:apple"
-        }
-      ],
-      "results": [
-        {
-          "item": "minecraft:apple"
-        }
-      ]
+    "loops": 1,
+    "results": [
+      {
+        "chance": 100.0,
+        "item": "tacz:ammo",
+        "nbt": "{AmmoId: 'tacz:9mm'}"
+      }
+    ],
+    "sequence": [
+      {
+        "type": "create:deploying",
+        "ingredients": [
+          {
+            "item": "massmunitions:incomplete_pistol_cartridge"
+          },
+          {
+            "item": "massmunitions:primer"
+          }
+        ],
+        "results": [
+          {
+            "item": "massmunitions:incomplete_pistol_cartridge"
+          }
+        ]
+      },
+      {
+        "type": "create:filling",
+        "ingredients": [
+          {
+            "item": "massmunitions:incomplete_pistol_cartridge"
+          },
+          {
+            "amount": 5,
+            "fluid": "massmunition:whisked_gunpowder_fluid",
+            "nbt": {}
+          }
+        ],
+        "results": [
+          {
+            "item": "massmunitions:incomplete_pistol_cartridge"
+          }
+        ]
+      },
+      {
+        "type": "create:deploying",
+        "ingredients": [
+          {
+            "item": "massmunitions:pistol_bullet"
+          },
+          {
+            "item": "massmunitions:incomplete_pistol_cartridge"
+          }
+        ],
+        "results": [
+          {
+            "item": "massmunitions:incomplete_pistol_cartridge"
+          }
+        ]
+      },
+       {
+        "type": "create:pressing",
+        "ingredients": [
+          {
+            "item": "massmunitions:incomplete_pistol_cartridge"
+          }
+        ],
+        "results": [
+          {
+            "item": "massmunitions:incomplete_pistol_cartridge"
+          }
+        ]
+      } ],
+    "transitionalItem": {
+      "item": "massmunitions:incomplete_pistol_cartridge"
     }
-  ],
-  "transitionalItem": {
-    "item": "minecraft:apple"
   }
-}
