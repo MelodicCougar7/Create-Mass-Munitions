@@ -19,8 +19,6 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, MassMunitions.MODID);
 
-    public static final RegistryObject<LiquidBlock> WHISKED_GUNPOWDER_BLOCK = BLOCKS.register("whisked_gunpowder", () -> new LiquidBlock(ModFluids.WHISKED_GUNPOWDER_SOURCE, BlockBehaviour.Properties.copy(Blocks.WATER)));
-
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         return toReturn;

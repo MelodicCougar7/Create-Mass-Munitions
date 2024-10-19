@@ -31,8 +31,6 @@ public class MassMunitions
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(ModEvents.class);
 
-        ModFluids.register(modEventBus);
-        ModFluidTypes.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModTabs.register(modEventBus);
@@ -59,9 +57,6 @@ public class MassMunitions
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)  {
         }
-        //dev
-        public static void onCommonSetup(FMLCommonSetupEvent event) {
-        ModFluidTypes.register(event.getModEventBus());
-        }
+
     }
 }
