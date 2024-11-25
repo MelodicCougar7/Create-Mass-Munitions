@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: massmunitions
+Specification-Vendor: MarbledNull, MelodicCougar7, Corrine
+Specification-Version: 1
+Implementation-Title: CMMIndevA2
+Implementation-Version: 1.20.1-1.0.0
+Implementation-Vendor: MarbledNull, MelodicCougar7, Corrine
+Implementation-Timestamp: 2024-11-24T22:58:33-0500
+
