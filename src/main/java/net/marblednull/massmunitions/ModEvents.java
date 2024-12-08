@@ -1,14 +1,32 @@
 package net.marblednull.massmunitions;
 
 import com.tacz.guns.api.event.common.GunShootEvent;
-import net.marblednull.massmunitions.init.ModItems;
+import net.marblednull.massmunitions.init.TACZModItems;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
-@Mod.EventBusSubscriber
+//dev from chatgpt
+@Mod.EventBusSubscriber(modid = "massmunitions", bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModEvents {
+
+    private static boolean TACZ_PRESENT = ModList.get().isLoaded("tacz");
+
+    // Register events conditionally
+    public static void commonSetup(FMLCommonSetupEvent event) {
+        if (TACZ_PRESENT) {
+            // Register all the events manually
+            MinecraftForge.EVENT_BUS.addListener(ModEvents::rifleShootEvent);
+            MinecraftForge.EVENT_BUS.addListener(ModEvents::pistolShootEvent);
+            MinecraftForge.EVENT_BUS.addListener(ModEvents::heavyPistolShootEvent);
+            MinecraftForge.EVENT_BUS.addListener(ModEvents::sniperShootEvent);
+            MinecraftForge.EVENT_BUS.addListener(ModEvents::shotgunShootEvent);
+        }
+    }
     //help from and credit to Leducklet/Corrineduck and ChatGPT smh
     @SubscribeEvent
     public static void rifleShootEvent(GunShootEvent event) {
@@ -17,14 +35,14 @@ public class ModEvents {
                 if (event.getGunItemStack().getTag().getString("GunId").equals(stringiterator)) {
                     if (event.getShooter().getMainHandItem().getTag().getString("GunFireMode").equals("BURST")) {
                         //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYRIFLECARTRIDGE.get(), 3));
-                        casing.setNoPickUpDelay();
+                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(TACZModItems.EMPTYRIFLECARTRIDGE.get(), 3));
+                        casing.setPickUpDelay(20);
                         //Add casing
                         event.getShooter().level().addFreshEntity(casing);
                     } else {
                         //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYRIFLECARTRIDGE.get()));
-                        casing.setNoPickUpDelay();
+                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(TACZModItems.EMPTYRIFLECARTRIDGE.get()));
+                        casing.setPickUpDelay(20);
                         //Add casing
                         event.getShooter().level().addFreshEntity(casing);
                     }
@@ -39,14 +57,14 @@ public class ModEvents {
                 if (event.getGunItemStack().getTag().getString("GunId").equals(stringiterator)) {
                     if (event.getShooter().getMainHandItem().getTag().getString("GunFireMode").equals("BURST")) {
                         //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYPISTOLCARTRIDGE.get(), 2));
-                        casing.setNoPickUpDelay();
+                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(TACZModItems.EMPTYPISTOLCARTRIDGE.get(), 2));
+                        casing.setPickUpDelay(20);
                         //Add casing
                         event.getShooter().level().addFreshEntity(casing);
                     } else {
                         //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYPISTOLCARTRIDGE.get()));
-                        casing.setNoPickUpDelay();
+                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(TACZModItems.EMPTYPISTOLCARTRIDGE.get()));
+                        casing.setPickUpDelay(20);
                         //Add casing
                         event.getShooter().level().addFreshEntity(casing);
                     }
@@ -61,14 +79,14 @@ public class ModEvents {
                 if (event.getGunItemStack().getTag().getString("GunId").equals(stringiterator)) {
                     if (event.getShooter().getMainHandItem().getTag().getString("GunFireMode").equals("BURST")) {
                         //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYHEAVYPISTOLCARTRIDGE.get(), 3));
-                        casing.setNoPickUpDelay();
+                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(TACZModItems.EMPTYHEAVYPISTOLCARTRIDGE.get(), 3));
+                        casing.setPickUpDelay(20);
                         //Add casing
                         event.getShooter().level().addFreshEntity(casing);
                     } else {
                         //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYHEAVYPISTOLCARTRIDGE.get()));
-                        casing.setNoPickUpDelay();
+                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(TACZModItems.EMPTYHEAVYPISTOLCARTRIDGE.get()));
+                        casing.setPickUpDelay(20);
                         //Add casing
                         event.getShooter().level().addFreshEntity(casing);
                     }
@@ -83,14 +101,14 @@ public class ModEvents {
                 if (event.getGunItemStack().getTag().getString("GunId").equals(stringiterator)) {
                     if (event.getShooter().getMainHandItem().getTag().getString("GunFireMode").equals("BURST")) {
                         //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYSNIPERCARTRIDGE.get(), 3));
-                        casing.setNoPickUpDelay();
+                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(TACZModItems.EMPTYSNIPERCARTRIDGE.get(), 3));
+                        casing.setPickUpDelay(20);
                         //Add casing
                         event.getShooter().level().addFreshEntity(casing);
                     } else {
                         //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYSNIPERCARTRIDGE.get()));
-                        casing.setNoPickUpDelay();
+                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(TACZModItems.EMPTYSNIPERCARTRIDGE.get()));
+                        casing.setPickUpDelay(20);
                         //Add casing
                         event.getShooter().level().addFreshEntity(casing);
                     }
@@ -105,14 +123,14 @@ public class ModEvents {
                 if (event.getGunItemStack().getTag().getString("GunId").equals(stringiterator)) {
                     if (event.getShooter().getMainHandItem().getTag().getString("GunFireMode").equals("BURST")) {
                         //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYSHOTGUNSHELL.get(), 2));
-                        casing.setNoPickUpDelay();
+                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(TACZModItems.EMPTYSHOTGUNSHELL.get(), 2));
+                        casing.setPickUpDelay(20);
                         //Add casing
                         event.getShooter().level().addFreshEntity(casing);
                     } else {
                         //Create casing entity
-                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(ModItems.EMPTYSHOTGUNSHELL.get()));
-                        casing.setNoPickUpDelay();
+                        ItemEntity casing = new ItemEntity(event.getShooter().level(), event.getShooter().getX(), event.getShooter().getY(), event.getShooter().getZ(), new ItemStack(TACZModItems.EMPTYSHOTGUNSHELL.get()));
+                        casing.setPickUpDelay(20);
                         //Add casing
                         event.getShooter().level().addFreshEntity(casing);
                     }
