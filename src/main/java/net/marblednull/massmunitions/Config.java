@@ -1,5 +1,6 @@
 package net.marblednull.massmunitions;
 //credit to Leducklet/Corrineduck for code inspiration here.
+import com.simibubi.create.infrastructure.config.CClient;
 import net.minecraftforge.common.ForgeConfigSpec;
 
 import java.util.List;
