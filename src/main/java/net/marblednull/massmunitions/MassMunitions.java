@@ -5,12 +5,9 @@ import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipHelper;
 import com.simibubi.create.foundation.item.TooltipModifier;
-import net.marblednull.massmunitions.init.CMMModItems;
-import net.marblednull.massmunitions.init.CMMModTab;
+import net.marblednull.massmunitions.init.*;
 import net.marblednull.massmunitions.init.Fluid.ModFluidTypes;
 import net.marblednull.massmunitions.init.Fluid.ModFluids;
-import net.marblednull.massmunitions.init.ModBlocks;
-import net.marblednull.massmunitions.init.TACZModItems;
 
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -56,9 +53,14 @@ public class MassMunitions
 
         if (TACZ_PRESENT) {
             TACZModItems.register(modEventBus);
-
             modEventBus.addListener(ModEvents::commonSetup);
             LOGGER.info("CMM: TACZ events registering.");
+        }
+        if (POINTBLANK_PRESENT) {
+            VPBModItems.register(modEventBus);
+            //not yet, need corrine's gunshootevent code for vpb
+            //modEventBus.addListener(ModEvents::commonSetup);
+            LOGGER.info("CMM: VPB events registering.");
         }
     }
 
