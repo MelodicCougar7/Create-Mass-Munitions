@@ -25,28 +25,28 @@ public class ModEvents {
             // Log or handle when tacz is not present (if necessary)
             LogUtils.getLogger().info("CMM: TACZ not present, skipping registration.");
         }
-
     }
 
     public static void registerTACZEventListeners() {
         if (TACZ_PRESENT) {
-        try {
-            // Dynamically load the GunShootEvent class from tacz mod using reflection
-            Class<?>  gunEvent = Class.forName("com.tacz.guns.api.event.common.GunShootEvent");
+            try {
+                // Dynamically load the GunShootEvent class from tacz mod using reflection
+                Class<?> gunEvent = Class.forName("com.tacz.guns.api.event.common.GunShootEvent");
 
-            // Register event listeners for gun-related events
-            MinecraftForge.EVENT_BUS.addListener(ModEvents::rifleShootEvent);
-            MinecraftForge.EVENT_BUS.addListener(ModEvents::pistolShootEvent);
-            MinecraftForge.EVENT_BUS.addListener(ModEvents::heavyPistolShootEvent);
-            MinecraftForge.EVENT_BUS.addListener(ModEvents::sniperShootEvent);
-            MinecraftForge.EVENT_BUS.addListener(ModEvents::shotgunShootEvent);
+                // Register event listeners for gun-related events
+                MinecraftForge.EVENT_BUS.addListener(ModEvents::rifleShootEvent);
+                MinecraftForge.EVENT_BUS.addListener(ModEvents::pistolShootEvent);
+                MinecraftForge.EVENT_BUS.addListener(ModEvents::heavyPistolShootEvent);
+                MinecraftForge.EVENT_BUS.addListener(ModEvents::sniperShootEvent);
+                MinecraftForge.EVENT_BUS.addListener(ModEvents::shotgunShootEvent);
 
-            LogUtils.getLogger().info("CMM: Listeners registered.");
-        } catch (ClassNotFoundException | NoClassDefFoundError e) {
-            // If the GunShootEvent class is not found, log the issue
-            LogUtils.getLogger().error("CMM: tacz's GunShootEvent class not found");
+                LogUtils.getLogger().info("CMM: Listeners registered.");
+            } catch (ClassNotFoundException | NoClassDefFoundError e) {
+                // If the GunShootEvent class is not found, log the issue
+                LogUtils.getLogger().error("CMM: tacz's GunShootEvent class not found");
+            }
         }
-    }}
+    }
     //help from and credit to Leducklet/Corrineduck and ChatGPT smh
 
     public static void rifleShootEvent(com.tacz.guns.api.event.common.GunShootEvent gunEvent) {

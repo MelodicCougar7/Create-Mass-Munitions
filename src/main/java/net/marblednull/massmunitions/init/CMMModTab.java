@@ -43,17 +43,16 @@ public class CMMModTab {
                             pOutput.accept(TACZModItems.CASING357MAG.get());
                             pOutput.accept(TACZModItems.CASING556X45.get());
                             pOutput.accept(TACZModItems.CASING50BMG.get());
-                            // bullets by category
-                            pOutput.accept(TACZModItems.HEAVYPISTOLBULLET.get());
-                            pOutput.accept(TACZModItems.PISTOLBULLET.get());
-                            pOutput.accept(TACZModItems.RIFLEBULLET.get());
-                            //pOutput.accept(ModItems.CATO_SHOT.get());
-                            pOutput.accept(TACZModItems.SNIPERBULLET.get());
-                            // bullets by ammo
+                            // bullets
                             pOutput.accept(TACZModItems.BULLET_9MM.get());
                             pOutput.accept(TACZModItems.BULLET_45ACP.get());
-                            pOutput.accept(TACZModItems.SHOT.get());
+                            pOutput.accept(TACZModItems.BULLET_338.get());
+                            pOutput.accept(TACZModItems.BULLET_308.get());
+                            pOutput.accept(TACZModItems.BULLET_357MAG.get());
                             pOutput.accept(TACZModItems.BULLET_50BMG.get());
+                            pOutput.accept(TACZModItems.SHOT.get());
+                            pOutput.accept(TACZModItems.BULLET_50AE.get());
+                            pOutput.accept(TACZModItems.BULLET_556X45.get());
                             // transitional cartridges
                             pOutput.accept(TACZModItems.INCOMPLETEHEAVYPISTOLCARTRIDGE.get());
                             pOutput.accept(TACZModItems.INCOMPLETEHEAVYPISTOLCARTRIDGE.get());
@@ -79,6 +78,13 @@ public class CMMModTab {
                             pOutput.accept(TACZModItems.INCOMPLETE556X45CASING.get());
                             // cartridge forms by ammo
                             pOutput.accept(TACZModItems.CARTFORM9MM.get());
+                            pOutput.accept(TACZModItems.CARTFORM45ACP.get());
+                            pOutput.accept(TACZModItems.CARTFORM388.get());
+                            pOutput.accept(TACZModItems.CARTFORM308.get());
+                            pOutput.accept(TACZModItems.CARTFORM357MAG.get());
+                            pOutput.accept(TACZModItems.CARTFORM12G.get());
+                            pOutput.accept(TACZModItems.CARTFORM50AE.get());
+                            pOutput.accept(TACZModItems.CARTFORM556X45.get());
                             //casing punches by category
                             pOutput.accept(TACZModItems.PISTOLCARTPUNCH.get());
                         }
