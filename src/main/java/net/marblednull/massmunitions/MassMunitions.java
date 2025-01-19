@@ -41,8 +41,6 @@ public class MassMunitions {
     public MassMunitions() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        //registering the config so it shows up as an editable toml. Thanks corrine
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         ModBlocks.register(modEventBus);
@@ -66,7 +64,7 @@ public class MassMunitions {
             LOGGER.info("CMM: VPB events registering.");
         }
 
-
+        //Registering the JSON based Config
         try {
             JsonConfig.checkConfig();
         } catch (IOException e) {
