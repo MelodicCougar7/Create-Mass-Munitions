@@ -21,6 +21,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+
+import java.io.IOException;
 //unused import related to subtitle implemenation, which will be attempted at a far later date
 //import static com.simibubi.create.Create.REGISTRATE;
 
@@ -38,6 +40,9 @@ public class MassMunitions {
 
     public MassMunitions() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        //registering the config so it shows up as an editable toml. Thanks corrine
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         ModBlocks.register(modEventBus);
@@ -60,8 +65,13 @@ public class MassMunitions {
             //modEventBus.addListener(ModEvents::commonSetup);
             LOGGER.info("CMM: VPB events registering.");
         }
-        //registering the config so it shows up as an editable toml. Thanks corrine
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC, "massmunitions.toml");
+
+
+        try {
+            JsonConfig.checkConfig();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

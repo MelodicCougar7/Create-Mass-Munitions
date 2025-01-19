@@ -15,6 +15,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 import static net.marblednull.massmunitions.MassMunitions.TACZ_PRESENT;
@@ -22,17 +23,14 @@ import static net.marblednull.massmunitions.MassMunitions.TACZ_PRESENT;
 public class ModEvents {
     // from corrine, config parser
     public static HashMap<String, Item> parseConfig() {
-        HashMap<String, Item> map = new HashMap<>();
-        for (String strToParse : Config.CASING_TO_GUNID.get()) {
-            String gunId;
-            String itemId;
-            String[] strs = strToParse.split("\\|");
-            gunId = strs[0];
-            itemId = strs[1];
-            Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(itemId));
-            map.put(gunId, item);
+        if(JsonConfig.CONFIG_MAP.isEmpty()) {
+            try {
+                JsonConfig.CONFIG_MAP = JsonConfig.readConfig();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
-        return map;
+        return JsonConfig.CONFIG_MAP;
     }
 
     // Register events conditionally
