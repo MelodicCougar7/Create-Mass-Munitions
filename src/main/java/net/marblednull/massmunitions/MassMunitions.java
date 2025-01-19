@@ -13,7 +13,10 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.IConfigSpec;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -31,7 +34,7 @@ public class MassMunitions {
     public static final boolean SCGUNS_PRESENT = ModList.get().isLoaded("scguns");
     public static final boolean JEG_PRESENT = ModList.get().isLoaded("tacz");
     //public static final boolean GCAA_PRESENT = ModList.get().isLoaded("tacz");
-    //bugs in GCAA and GCRR prevent implementation unforunately. Placeholder boolean logic will remain as a reminder.
+    //bugs in GCAA and GCRR prevent implementation, unfortunately. Placeholder boolean logic will remain as a reminder.
 
     public MassMunitions() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -57,12 +60,13 @@ public class MassMunitions {
             //modEventBus.addListener(ModEvents::commonSetup);
             LOGGER.info("CMM: VPB events registering.");
         }
+        //registering the config so it shows up as an editable toml. Thanks corrine
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC, "massmunitions.toml");
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
 
     }
 

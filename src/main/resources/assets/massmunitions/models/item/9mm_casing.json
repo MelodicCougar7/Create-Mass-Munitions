@@ -1,8 +1,8 @@
 {
   "credit": "Made with Blockbench",
   "textures": {
-    "0": "ammo_casing",
-    "particle": "ammo_casing"
+    "0": "massmunitions:item/ammo_casing",
+    "particle": "massmunitions:item/ammo_casing"
   },
   "elements": [
     {
