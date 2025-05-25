@@ -8,6 +8,7 @@ import net.marblednull.massmunitions.init.Fluid.ModFluids;
 
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -29,9 +30,9 @@ public class MassMunitions {
     public static final boolean TACZ_PRESENT = ModList.get().isLoaded("tacz");
     public static final boolean POINTBLANK_PRESENT = ModList.get().isLoaded("pointblank");
     public static final boolean SCGUNS_PRESENT = ModList.get().isLoaded("scguns");
-    public static final boolean JEG_PRESENT = ModList.get().isLoaded("tacz");
-    //public static final boolean GCAA_PRESENT = ModList.get().isLoaded("tacz");
-    //bugs in GCAA and GCRR prevent implementation unforunately. Placeholder boolean logic will remain as a reminder.
+    public static final boolean JEG_PRESENT = ModList.get().isLoaded("jeg"); // not confirmed to be correct
+    //public static final boolean GCAA_PRESENT = ModList.get().isLoaded("gcaa"); // not confirmed to be correct
+    //bugs in GCAA and GCRR prevent implementation, unfortunately. Placeholder boolean logic will remain as a reminder.
 
     public MassMunitions() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -40,6 +41,9 @@ public class MassMunitions {
         ModBlocks.register(modEventBus);
         // basic materials, always loaded
         CMMModItems.register(modEventBus);
+
+        // always register the recipe separating logic
+        CraftingHelper.register(new CustomCondition.Serializer());
 
         ModFluids.register(modEventBus);
         ModFluidTypes.register(modEventBus);
