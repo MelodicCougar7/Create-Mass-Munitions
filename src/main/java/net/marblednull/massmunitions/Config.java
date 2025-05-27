@@ -13,6 +13,7 @@ public class Config {
     public static final ForgeConfigSpec.ConfigValue<Boolean> ONE_POINT_ONE;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ONE_POINT_ONE_ONE;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ONE_TO_FUN;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> RECIPE_OVERRIDE;
 
     static {
         BUILDER.push("one_to_one");
@@ -34,7 +35,7 @@ public class Config {
 
         BUILDER.push("one_point_one_one");
         ONE_POINT_ONE_ONE = BUILDER
-                .comment("Recipe style will be 1.00-1.00. Absolute adherence to base recipes with zero waste, tolerance or deviance.")
+                .comment("Recipe style will be 1.00-1.00. Absolute adherence to base recipes at the cost of realism.")
                 .comment("Only base materials, no brass. Rounding unnecessary.")
                 .comment("I personally don't recommend this one, but it is the one that will allow your players to automate ammo with the recipes that the dev of your gun mod intended.")
                 .define("one_point_one_one", false); // Default false
@@ -46,6 +47,13 @@ public class Config {
                 .comment("Recipe style will be 0.1 - 0.1. Substantial deviance from base mods.")
                 .comment("Uses brass for casings and simulates bullets. Attempts to be as fun and as close to real life processes as possible in a vanilla friendly way.")
                 .define("one_to_fun", false); // Default false
+
+        BUILDER.pop();
+
+        BUILDER.push("recipe_override");
+        RECIPE_OVERRIDE = BUILDER
+                .comment("Overrides the game closing event triggered if the true number of above configs is not 1. Please, keep this disabled. I do not guarantee anything will work with it off.")
+                .define("recipe_override", false); // Default false. Please, keep it that way
 
         BUILDER.pop();
 

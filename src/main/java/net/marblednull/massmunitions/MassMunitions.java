@@ -14,10 +14,14 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
+import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.ModLoadingException;
+import net.minecraftforge.fml.ModLoadingStage;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.moddiscovery.ModInfo;
 import org.slf4j.Logger;
 //unused import related to subtitle implemenation, which will be attempted at a far later date
 //import static com.simibubi.create.Create.REGISTRATE;
@@ -50,9 +54,10 @@ public class MassMunitions {
         //conditionality built in, always loaded
         CMMModTab.register(modEventBus);
 
+        // REWORK SUCH THAT THESE ONLY AFFECT THE BOOLEAN DETERMINATION OF A VALID RECIPE CONFIG
         if (TACZ_PRESENT) {
             TACZModItems.register(modEventBus);
-            modEventBus.addListener(ModEvents::commonSetup);
+
             LOGGER.info("CMM: TACZ events registering.");
         }
         if (POINTBLANK_PRESENT) {
@@ -61,7 +66,28 @@ public class MassMunitions {
             //modEventBus.addListener(ModEvents::commonSetup);
             LOGGER.info("CMM: VPB events registering.");
         }
-    }
+
+        // determine if an invalid set of recipes has been triggered
+        int RecipeStyleCounter = 0; // default is zero, should only ever be one.
+        Boolean[] configs = {Config.ONE_TO_ONE.get(), Config.ONE_POINT_ONE.get(), Config.ONE_POINT_ONE_ONE.get(), Config.ONE_TO_FUN.get()};
+
+        if (!Config.RECIPE_OVERRIDE.get()) {
+            for (int i = 0; i < configs.length; i++ ) {
+                if (configs[i] = Boolean.TRUE) {
+                    RecipeStyleCounter += 1;
+                }
+            }
+            if (RecipeStyleCounter > 1) {
+                throw new RuntimeException("You have selected more than 1 recipe style. Pick ONE or enable the override to ignore this.");
+            }
+            if (RecipeStyleCounter < 1) {
+                throw new RuntimeException("You have not selected a recipe style. Pick ONE or enable the override to ignore this.");
+            }
+        }
+
+
+
+    } // main class ends on this bracket
 
     private void commonSetup(final FMLCommonSetupEvent event) {
 
