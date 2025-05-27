@@ -14,14 +14,10 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
-import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.ModLoadingException;
-import net.minecraftforge.fml.ModLoadingStage;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.loading.moddiscovery.ModInfo;
 import org.slf4j.Logger;
 //unused import related to subtitle implemenation, which will be attempted at a far later date
 //import static com.simibubi.create.Create.REGISTRATE;
@@ -47,7 +43,7 @@ public class MassMunitions {
         CMMModItems.register(modEventBus);
 
         // always register the recipe separating logic
-        CraftingHelper.register(new CustomCondition.Serializer());
+        CraftingHelper.register(new oneToOneCondition.Serializer());
 
         ModFluids.register(modEventBus);
         ModFluidTypes.register(modEventBus);
@@ -84,6 +80,9 @@ public class MassMunitions {
                 throw new RuntimeException("You have not selected a recipe style. Pick ONE or enable the override to ignore this.");
             }
         }
+
+        // determine which conditions to enable
+
 
 
 
