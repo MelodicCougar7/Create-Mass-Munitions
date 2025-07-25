@@ -19,7 +19,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
-//unused import related to subtitle implemenation, which will be attempted at a far later date
+//unused import related to subtitle implementation, which will be attempted at a far later date
 //import static com.simibubi.create.Create.REGISTRATE;
 
 @Mod(MassMunitions.MODID)
@@ -42,8 +42,8 @@ public class MassMunitions {
         // basic materials, always loaded
         CMMModItems.register(modEventBus);
 
-        // always register the recipe separating logic
-        CraftingHelper.register(new oneToOneCondition.Serializer());
+        // for now, only register the recipes for 1.0, which is what will be used in CW
+        CraftingHelper.register(new onePointZeroCondition.Serializer());
 
         ModFluids.register(modEventBus);
         ModFluidTypes.register(modEventBus);

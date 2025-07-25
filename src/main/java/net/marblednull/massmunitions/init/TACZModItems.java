@@ -12,41 +12,43 @@ public class TACZModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, MassMunitions.MODID);
 
     //casings
-    public static final RegistryObject<Item> CASING45ACP = TACZITEMS.register("45acp_casing", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CASING9MM = TACZITEMS.register("9mm_casing", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CASING338 = TACZITEMS.register("338_casing", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CASING308 = TACZITEMS.register("308_casing", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CASING357MAG = TACZITEMS.register("357mag_casing", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CASING50BMG = TACZITEMS.register("50bmg_casing", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CASING12G = TACZITEMS.register("12g_casing", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CASING50AE = TACZITEMS.register("50ae_casing", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CASING556X45 = TACZITEMS.register("556x45_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CASING45ACP = TACZITEMS.register("tacz_45acp_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CASING9MM = TACZITEMS.register("tacz_9mm_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CASING338 = TACZITEMS.register("tacz_338_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CASING308 = TACZITEMS.register("tacz_308_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CASING357MAG = TACZITEMS.register("tacz_357mag_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CASING50BMG = TACZITEMS.register("tacz_50bmg_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CASING12G = TACZITEMS.register("tacz_12g_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CASING50AE = TACZITEMS.register("tacz_50ae_casing", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CASING556X45 = TACZITEMS.register("tacz_556x45_casing", () -> new Item(new Item.Properties()));
 
     //bullets
-    public static final RegistryObject<Item> BULLET_45ACP = TACZITEMS.register("45acp_bullet", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> BULLET_9MM = TACZITEMS.register("9mm_bullet", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> BULLET_338 = TACZITEMS.register("338_bullet", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> BULLET_308 = TACZITEMS.register("308_bullet", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> BULLET_357MAG = TACZITEMS.register("357mag_bullet", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> BULLET_50BMG = TACZITEMS.register("50bmg_bullet", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> SHOT = TACZITEMS.register("shot", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> BULLET_50AE = TACZITEMS.register("50ae_bullet", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> BULLET_556X45 = TACZITEMS.register("556x45_bullet", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BULLET_45ACP = TACZITEMS.register("tacz_45acp_bullet", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BULLET_9MM = TACZITEMS.register("tacz_9mm_bullet", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BULLET_338 = TACZITEMS.register("tacz_338_bullet", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BULLET_308 = TACZITEMS.register("tacz_308_bullet", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BULLET_357MAG = TACZITEMS.register("tacz_357mag_bullet", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BULLET_50BMG = TACZITEMS.register("tacz_50bmg_bullet", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SHOT = TACZITEMS.register("tacz_shot", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BULLET_50AE = TACZITEMS.register("tacz_50ae_bullet", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BULLET_556X45 = TACZITEMS.register("tacz_556x45_bullet", () -> new Item(new Item.Properties()));
 
 
-    //empties
-    public static final RegistryObject<Item> EMPTYHEAVYPISTOLCARTRIDGE = TACZITEMS.register("empty_heavy_pistol_cartridge", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> EMPTYPISTOLCARTRIDGE = TACZITEMS.register("empty_pistol_cartridge", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> EMPTYRIFLECARTRIDGE = TACZITEMS.register("empty_rifle_cartridge", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> EMPTYSHOTGUNSHELL = TACZITEMS.register("empty_shotgun_shell", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> EMPTYSNIPERCARTRIDGE = TACZITEMS.register("empty_sniper_cartridge", () -> new Item(new Item.Properties()));
+    //empties DEPRECATED
+//    public static final RegistryObject<Item> EMPTYHEAVYPISTOLCARTRIDGE = TACZITEMS.register("empty_heavy_pistol_cartridge", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> EMPTYPISTOLCARTRIDGE = TACZITEMS.register("empty_pistol_cartridge", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> EMPTYRIFLECARTRIDGE = TACZITEMS.register("empty_rifle_cartridge", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> EMPTYSHOTGUNSHELL = TACZITEMS.register("empty_shotgun_shell", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> EMPTYSNIPERCARTRIDGE = TACZITEMS.register("empty_sniper_cartridge", () -> new Item(new Item.Properties()));
 
-    //transitional items
-    public static final RegistryObject<Item> INCOMPLETEHEAVYPISTOLCARTRIDGE = TACZITEMS.register("incomplete_heavy_pistol_cartridge", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> INCOMPLETEPISTOLCARTRIDGE = TACZITEMS.register("incomplete_pistol_cartridge", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> INCOMPLETERIFLECARTRIDGE = TACZITEMS.register("incomplete_rifle_cartridge", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> INCOMPLETESHOTGUNSHELL = TACZITEMS.register("incomplete_shotgun_shell", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> INCOMPLETESNIPERCARTRIDGE = TACZITEMS.register("incomplete_sniper_cartridge", () -> new Item(new Item.Properties()));
+    //transitional items DEPRECATED
+//    public static final RegistryObject<Item> INCOMPLETEHEAVYPISTOLCARTRIDGE = TACZITEMS.register("incomplete_heavy_pistol_cartridge", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> INCOMPLETEPISTOLCARTRIDGE = TACZITEMS.register("incomplete_pistol_cartridge", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> INCOMPLETERIFLECARTRIDGE = TACZITEMS.register("incomplete_rifle_cartridge", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> INCOMPLETESHOTGUNSHELL = TACZITEMS.register("incomplete_shotgun_shell", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> INCOMPLETESNIPERCARTRIDGE = TACZITEMS.register("incomplete_sniper_cartridge", () -> new Item(new Item.Properties()));
+
+    // will be universal *for now
 
     public static final RegistryObject<Item> INCOMPLETE9MMCASING = TACZITEMS.register("incomplete_9mm_casing", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> INCOMPLETE45ACPCASING = TACZITEMS.register("incomplete_45acp_casing", () -> new Item(new Item.Properties()));
@@ -57,17 +59,34 @@ public class TACZModItems {
     public static final RegistryObject<Item> INCOMPLETE12GCASING = TACZITEMS.register("incomplete_12g_casing", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> INCOMPLETE50AECASING = TACZITEMS.register("incomplete_50ae_casing", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> INCOMPLETE556X45CASING = TACZITEMS.register("incomplete_556x45_casing", () -> new Item(new Item.Properties()));
+
+    // cups
+
+    public static final RegistryObject<Item> CUP9MM = TACZITEMS.register("tacz_9mm_cup", () -> new Item(new Item.Properties()));
   
-    public static final RegistryObject<Item> CARTFORM9MM = TACZITEMS.register("9mm_cartridge_form", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CARTFORM45ACP = TACZITEMS.register("45acp_cartridge_form", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CARTFORM388 = TACZITEMS.register("338_cartridge_form", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CARTFORM308 = TACZITEMS.register("308_cartridge_form", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CARTFORM357MAG = TACZITEMS.register("357mag_cartridge_form", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CARTFORM12G = TACZITEMS.register("12g_cartridge_form", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CARTFORM50AE = TACZITEMS.register("50ae_cartridge_form", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CARTFORM556X45 = TACZITEMS.register("556x45_cartridge_form", () -> new Item(new Item.Properties()));
+    // tools
+
+    public static final RegistryObject<Item> CARTFORM9MM = TACZITEMS.register("tacz_9mm_cartridge_form", () -> new Item(new Item.Properties().durability(1000)));
+    public static final RegistryObject<Item> CARTFORM45ACP = TACZITEMS.register("tacz_45acp_cartridge_form", () -> new Item(new Item.Properties().durability(1000)));
+    public static final RegistryObject<Item> CARTFORM388 = TACZITEMS.register("tacz_338_cartridge_form", () -> new Item(new Item.Properties().durability(1000)));
+    public static final RegistryObject<Item> CARTFORM308 = TACZITEMS.register("tacz_308_cartridge_form", () -> new Item(new Item.Properties().durability(1000)));
+    public static final RegistryObject<Item> CARTFORM357MAG = TACZITEMS.register("tacz_357mag_cartridge_form", () -> new Item(new Item.Properties().durability(1000)));
+    public static final RegistryObject<Item> CARTFORM12G = TACZITEMS.register("tacz_12g_cartridge_form", () -> new Item(new Item.Properties().durability(1000)));
+    public static final RegistryObject<Item> CARTFORM50AE = TACZITEMS.register("tacz_50ae_cartridge_form", () -> new Item(new Item.Properties().durability(1000)));
+    public static final RegistryObject<Item> CARTFORM556X45 = TACZITEMS.register("tacz_556x45_cartridge_form", () -> new Item(new Item.Properties().durability(1000)));
+
+    public static final RegistryObject<Item> BULLETFORM9MM = TACZITEMS.register("tacz_9mm_bullet_form", () -> new Item(new Item.Properties().durability(1000)));
+    public static final RegistryObject<Item> BULLETFORM45ACP = TACZITEMS.register("tacz_45acp_bullet_form", () -> new Item(new Item.Properties().durability(1000)));
+    public static final RegistryObject<Item> BULLETFORM388 = TACZITEMS.register("tacz_338_bullet_form", () -> new Item(new Item.Properties().durability(1000)));
+    public static final RegistryObject<Item> BULLETFORM308 = TACZITEMS.register("tacz_308_bullet_form", () -> new Item(new Item.Properties().durability(1000)));
+    public static final RegistryObject<Item> BULLETFORM357MAG = TACZITEMS.register("tacz_357mag_bullet_form", () -> new Item(new Item.Properties().durability(1000)));
+    public static final RegistryObject<Item> BULLETFORM12G = TACZITEMS.register("tacz_12g_bullet_form", () -> new Item(new Item.Properties().durability(1000)));
+    public static final RegistryObject<Item> BULLETFORM50AE = TACZITEMS.register("tacz_50ae_bullet_form", () -> new Item(new Item.Properties().durability(1000)));
+    public static final RegistryObject<Item> BULLETFORM556X45 = TACZITEMS.register("tacz_556x45_bullet_form", () -> new Item(new Item.Properties().durability(1000)));
 
     public static final RegistryObject<Item> PISTOLCARTPUNCH = TACZITEMS.register("pistol_cartridge_punch", () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> PUNCH9MM = TACZITEMS.register("tacz_9mm_casing_punch", () -> new Item(new Item.Properties().durability(1000)));
 
     public static void register(IEventBus eventBus) {
         TACZITEMS.register(eventBus);

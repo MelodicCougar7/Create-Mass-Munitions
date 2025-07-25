@@ -4,6 +4,7 @@ import net.marblednull.massmunitions.MassMunitions;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -53,19 +54,19 @@ public class CMMModTab {
                             pOutput.accept(TACZModItems.SHOT.get());
                             pOutput.accept(TACZModItems.BULLET_50AE.get());
                             pOutput.accept(TACZModItems.BULLET_556X45.get());
-                            // transitional cartridges
-                            pOutput.accept(TACZModItems.INCOMPLETEHEAVYPISTOLCARTRIDGE.get());
-                            pOutput.accept(TACZModItems.INCOMPLETEHEAVYPISTOLCARTRIDGE.get());
-                            pOutput.accept(TACZModItems.INCOMPLETEPISTOLCARTRIDGE.get());
-                            pOutput.accept(TACZModItems.INCOMPLETERIFLECARTRIDGE.get());
-                            pOutput.accept(TACZModItems.INCOMPLETESHOTGUNSHELL.get());
-                            pOutput.accept(TACZModItems.INCOMPLETESNIPERCARTRIDGE.get());
-                            // empty casings
-                            pOutput.accept(TACZModItems.EMPTYHEAVYPISTOLCARTRIDGE.get());
-                            pOutput.accept(TACZModItems.EMPTYPISTOLCARTRIDGE.get());
-                            pOutput.accept(TACZModItems.EMPTYRIFLECARTRIDGE.get());
-                            pOutput.accept(TACZModItems.EMPTYSHOTGUNSHELL.get());
-                            pOutput.accept(TACZModItems.EMPTYSNIPERCARTRIDGE.get());
+//                            // transitional cartridges
+//                            pOutput.accept(TACZModItems.INCOMPLETEHEAVYPISTOLCARTRIDGE.get());
+//                            pOutput.accept(TACZModItems.INCOMPLETEHEAVYPISTOLCARTRIDGE.get());
+//                            pOutput.accept(TACZModItems.INCOMPLETEPISTOLCARTRIDGE.get());
+//                            pOutput.accept(TACZModItems.INCOMPLETERIFLECARTRIDGE.get());
+//                            pOutput.accept(TACZModItems.INCOMPLETESHOTGUNSHELL.get());
+//                            pOutput.accept(TACZModItems.INCOMPLETESNIPERCARTRIDGE.get());
+//                            // empty casings
+//                            pOutput.accept(TACZModItems.EMPTYHEAVYPISTOLCARTRIDGE.get());
+//                            pOutput.accept(TACZModItems.EMPTYPISTOLCARTRIDGE.get());
+//                            pOutput.accept(TACZModItems.EMPTYRIFLECARTRIDGE.get());
+//                            pOutput.accept(TACZModItems.EMPTYSHOTGUNSHELL.get());
+//                            pOutput.accept(TACZModItems.EMPTYSNIPERCARTRIDGE.get());
                             // transitional casings
                             pOutput.accept(TACZModItems.INCOMPLETE9MMCASING.get());
                             pOutput.accept(TACZModItems.INCOMPLETE45ACPCASING.get());
@@ -87,6 +88,15 @@ public class CMMModTab {
                             pOutput.accept(TACZModItems.CARTFORM556X45.get());
                             //casing punches by category
                             pOutput.accept(TACZModItems.PISTOLCARTPUNCH.get());
+                            // bullet forms by caliber
+                            pOutput.accept(TACZModItems.BULLETFORM9MM.get());
+                            pOutput.accept(TACZModItems.BULLETFORM45ACP.get());
+                            pOutput.accept(TACZModItems.BULLETFORM388.get());
+                            pOutput.accept(TACZModItems.BULLETFORM308.get());
+                            pOutput.accept(TACZModItems.BULLETFORM357MAG.get());
+                            pOutput.accept(TACZModItems.BULLETFORM12G.get());
+                            pOutput.accept(TACZModItems.BULLETFORM50AE.get());
+                            pOutput.accept(TACZModItems.BULLETFORM556X45.get());
                         }
                         if (POINTBLANK_PRESENT) {
                             // casings by ammo

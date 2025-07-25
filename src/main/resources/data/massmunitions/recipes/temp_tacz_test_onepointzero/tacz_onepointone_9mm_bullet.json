@@ -1,0 +1,57 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "massmunitions:valid_cmm_recipe_selection_1.0-1.0"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "tacz"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "create:sequenced_assembly",
+        "ingredient": {
+          "tag": "forge:plates/copper"
+        },
+        "loops": 6,
+        "results": [
+          {
+            "chance": 100,
+            "item": "massmunitions:tacz_9mm_bullet",
+            "count": 6
+          }
+        ],
+        "sequence": [
+          {
+            "type": "create:deploying",
+            "ingredients": [
+              {
+                "item": "create:copper_sheet"
+              },
+              {
+                "item": "massmunitions:tacz_9mm_bullet_form"
+              }
+            ],
+            "results": [
+              {
+                "item": "create:copper_sheet"
+              }
+            ],
+            "keepHeldItem": true
+          }
+        ],
+        "transitionalItem": {
+          "item": "create:copper_sheet"
+        }
+      }
+    }
+  ]
+}

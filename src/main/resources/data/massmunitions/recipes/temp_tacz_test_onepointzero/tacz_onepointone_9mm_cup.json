@@ -1,0 +1,57 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "massmunitions:valid_cmm_recipe_selection_1.0-1.0"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "tacz"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "create:sequenced_assembly",
+        "ingredient": {
+          "tag": "forge:plates/brass"
+        },
+        "loops": 6,
+        "results": [
+          {
+            "chance": 100,
+            "item": "massmunitions:tacz_9mm_cup",
+            "count": 6
+          }
+        ],
+        "sequence": [
+          {
+            "type": "create:deploying",
+            "ingredients": [
+              {
+                "item": "massmunitions:c260_sheet"
+              },
+              {
+                "item": "massmunitions:tacz_9mm_casing_punch"
+              }
+            ],
+            "results": [
+              {
+                "item": "massmunitions:c260_sheet"
+              }
+            ],
+            "keepHeldItem": true
+          }
+        ],
+        "transitionalItem": {
+          "item": "massmunitions:c260_sheet"
+        }
+      }
+    }
+  ]
+}

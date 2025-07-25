@@ -1,0 +1,104 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "massmunitions:valid_cmm_recipe_selection_1.0-1.0"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "tacz"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "create:sequenced_assembly",
+        "ingredient": {
+          "item": "massmunitions:tacz_9mm_casing"
+        },
+        "loops": 1,
+        "results": [
+          {
+            "chance": 100,
+            "item": "tacz:ammo",
+            "nbt": "{AmmoId:'tacz:9mm'}",
+            "count": 1
+          }
+        ],
+        "sequence": [
+      {
+        "type": "create:deploying",
+        "ingredients": [
+          {
+            "item": "massmunitions:tacz_9mm_casing"
+          },
+          {
+            "item": "massmunitions:primer_cap"
+          }
+        ],
+        "results": [
+          {
+            "item": "massmunitions:tacz_9mm_casing"
+          }
+        ]
+      },
+      {
+        "type": "create:filling",
+        "ingredients": [
+          {
+            "item": "massmunitions:tacz_9mm_casing"
+          },
+          {
+            "amount": 4,
+            "fluid": "massmunitions:whisked_gunpowder_fluid",
+            "nbt": {}
+          }
+        ],
+        "results": [
+          {
+            "item": "massmunitions:tacz_9mm_casing"
+          }
+        ]
+      },
+      {
+        "type": "create:deploying",
+        "ingredients": [
+          {
+            "item": "massmunitions:tacz_9mm_casing"
+          },
+          {
+            "item": "massmunitions:9mm_bullet"
+          }
+        ],
+        "results": [
+          {
+            "item": "massmunitions:tacz_9mm_casing"
+          }
+        ]
+      },
+      {
+        "type": "create:pressing",
+        "ingredients": [
+          {
+            "item": "massmunitions:tacz_9mm_casing"
+          }
+        ],
+        "results": [
+          {
+            "item": "massmunitions:tacz_9mm_casing"
+          }
+        ]
+      }
+    ],
+        "transitionalItem": {
+          "item": "massmunitions:tacz_9mm_casing"
+        }
+      }
+    }
+  ]
+}

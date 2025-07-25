@@ -1,0 +1,91 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {
+              "type": "massmunitions:valid_cmm_recipe_selection_1.0-1.0"
+            },
+            {
+              "type": "forge:mod_loaded",
+              "modid": "tacz"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "create:sequenced_assembly",
+        "ingredient": {
+          "tag": "massmunitions:tacz_9mm_cup"
+        },
+        "loops": 1,
+        "results": [
+          {
+            "chance": 100,
+            "item": "massmunitions:tacz_9mm_casing",
+            "count": 1
+          }
+        ],
+        "sequence": [
+          {
+            "type": "create:deploying",
+            "ingredients": [
+              {
+                "item": "massmunitions:tacz_9mm_cup"
+              },
+              {
+                "item": "massmunitions:tacz_9mm_casing_form"
+              }
+            ],
+            "results": [
+              {
+                "item": "massmunitions:tacz_9mm_cup"
+              }
+            ],
+            "keepHeldItem": true
+          },
+          {
+            "type": "create:deploying",
+            "ingredients": [
+              {
+                "item": "massmunitions:tacz_9mm_cup"
+              },
+              {
+                "item": "massmunitions:tacz_9mm_casing_form"
+              }
+            ],
+            "results": [
+              {
+                "item": "massmunitions:tacz_9mm_cup"
+              }
+            ],
+            "keepHeldItem": true
+          },
+          {
+            "type": "create:deploying",
+            "ingredients": [
+              {
+                "item": "massmunitions:tacz_9mm_cup"
+              },
+              {
+                "item": "massmunitions:tacz_9mm_casing_punch"
+              }
+            ],
+            "results": [
+              {
+                "item": "massmunitions:tacz_9mm_cup"
+              }
+            ],
+            "keepHeldItem": true
+          }
+        ],
+        "transitionalItem": {
+          "item": "massmunitions:tacz_9mm_cup"
+        }
+      }
+    }
+  ]
+}

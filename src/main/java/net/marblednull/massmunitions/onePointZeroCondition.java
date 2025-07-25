@@ -5,12 +5,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionSerializer;
 
-public class onePointOneCondition implements ICondition {
+public class onePointZeroCondition implements ICondition {
     public static final ResourceLocation NAME = new ResourceLocation("massmunitions", "valid_cmm_recipe_selection_1.0-1.0");
 
     private final boolean shouldLoad;
 
-    public onePointOneCondition(boolean shouldLoad) {
+    public onePointZeroCondition(boolean shouldLoad) {
         this.shouldLoad = Config.ONE_POINT_ONE.get();
     }
 
@@ -24,16 +24,16 @@ public class onePointOneCondition implements ICondition {
         return shouldLoad;
     }
 
-    public static class Serializer implements IConditionSerializer<onePointOneCondition> {
+    public static class Serializer implements IConditionSerializer<onePointZeroCondition> {
         @Override
-        public void write(JsonObject json, onePointOneCondition value) {
+        public void write(JsonObject json, onePointZeroCondition value) {
             json.addProperty("shouldLoad1.1", value.shouldLoad);
         }
 
         @Override
-        public onePointOneCondition read(JsonObject json) {
+        public onePointZeroCondition read(JsonObject json) {
 
-            return new onePointOneCondition(Config.ONE_POINT_ONE.get()); // potentially redundant call, will fix later if needed
+            return new onePointZeroCondition(Config.ONE_POINT_ONE.get()); // potentially redundant call, will fix later if needed
         }
 
         @Override
